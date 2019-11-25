@@ -20,7 +20,7 @@ export class DepartamentFormComponent implements OnInit {
     this.departamenteServices.addDepartament({name: this.depName});
     this.clear(); 
   }
-  
+
   clear() {
     this.depName = "";
   }

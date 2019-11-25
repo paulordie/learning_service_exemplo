@@ -11,7 +11,10 @@ export class DepartamentService {
     {id: 2, name: "Books"},
     {id: 3, name: "Electronics"},
     {id: 4, name: "Computers"},
-  ]
+  ];
+
+  private nextId:number = 5;
+
   constructor() { }
 
   getDepartaments(): Departament[] {
@@ -19,7 +22,7 @@ export class DepartamentService {
   }
 
   addDepartament(d: Departament) {
-    this.departaments.push(d);
+    this.departaments.push({...d,id: this.nextId++});
     console.log(this.departaments);
   }
 }
