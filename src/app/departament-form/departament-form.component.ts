@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartamentFormComponent implements OnInit {
 
+  depName: string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  save(){
+
+  }
+
+  clear() {
+    
   }
 
 }
