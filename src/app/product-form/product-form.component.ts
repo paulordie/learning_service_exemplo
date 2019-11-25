@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DepartamentFormComponent } from '../departament-form/departament-form.component';
+import { Departament } from '../models/departament.model';
 
 @Component({
   selector: 'app-product-form',
