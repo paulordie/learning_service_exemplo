@@ -25,4 +25,8 @@ export class DepartamentService {
     this.departaments.push({...d,id: this.nextId++});
     console.log(this.departaments);
   }
+
+  getDepartamentById(id: number): Departament {
+    return this.departaments.find((d) => d.id == id);
+  }
 }
