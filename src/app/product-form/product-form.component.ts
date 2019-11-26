@@ -30,7 +30,7 @@ export class ProductFormComponent implements OnInit {
       price: this.price,
       description: this.description,
       departament: this.departament });
-
+      this.clear();
   }
 
   clear() {

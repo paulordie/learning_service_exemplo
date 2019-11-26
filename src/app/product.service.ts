@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Product } from './models/product.model';
 import { DepartamentService } from './departament.service';
 
@@ -17,6 +17,8 @@ export class ProductService {
   private products: Product[] = [];
   private nextId: number;
 
+  onNewProduct: EventEmitter<Product> = new EventEmitter<Product>();
+
   constructor(
     private departamentService: DepartamentService ) { 
       for (let p of this.dataFormServer){
@@ -32,7 +34,7 @@ export class ProductService {
   }
     
 
-  getProduct(): Product[] {
+  getProducts(): Product[] {
     return this.products;
   }
 
