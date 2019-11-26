@@ -19,6 +19,7 @@ export class ProductsTableComponent implements OnInit {
 
   ngOnInit() {
     this.products = this.productService.getProducts();
+    this.productService.onNewProduct.subscribe((p) => console.log(p));
   }
 
 }
